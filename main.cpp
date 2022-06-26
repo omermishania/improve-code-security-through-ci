@@ -103,7 +103,6 @@ int main()
         displayBoard(board);
         // Validate the board for winning possibility
         // stateGame = checkWinning(board);
-
         // --------------------------------------------------------------------------------------
 
         // Vertical inspection - 1st column
