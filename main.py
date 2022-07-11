@@ -4,13 +4,6 @@ from UnleashClient import UnleashClient
 import requests
 import json
 
-# Returns the feature toggle's state from Unleash API
-def feature_toggle_on():
-    client = UnleashClient(url="http://baruch.cloudlet-dev.com:4242/api", app_name="bitcoin-info", custom_headers={'Authorization': 'UNLEASH-API-TOKEN'})
-    client.initialize_client()
-    toggle_state  = client.is_enabled("your-toggle-name")
-    return toggle_state
-
 
 app = Flask(__name__)
 
