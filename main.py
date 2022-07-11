@@ -13,7 +13,7 @@ app = Flask(__name__)
 def usd_currency():
     currency_code = 'USD'
 
-    bitcoin_info = requests.get('https://api.coinbase.com/v2/prices/spot?currency='+currency_code).text # get Bitcoin info in USD from coinbase API
+    bitcoin_info = requests.get('https://api.coinbase.com/v2/prices/spot?currency='+currency_code, verify=False).text # get Bitcoin info in USD from coinbase API
     bitcoin_info = json.loads(bitcoin_info)
     bitcoin_price = bitcoin_info['data']['amount'] # get only bitcoin price in USD
     return f'Current bitcoin price in {currency_code} is: {bitcoin_price}'
